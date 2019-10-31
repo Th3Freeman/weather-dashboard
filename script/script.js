@@ -30,7 +30,7 @@ $("#searchButton").on("click", function (event) {
         .then(function (response) {
 
             console.log(response)
-            // Creating a div to hold the movie
+            // Creating a div to hold the response
             var weatherDiv = $("#weatherShow").append(
                 $("<div class='forecast'>")
                 );
@@ -45,34 +45,6 @@ $("#searchButton").on("click", function (event) {
             // Displaying the Temperature
             weatherDiv.append(p1);
 
-            // // Storing the release year
-            // var released = response.Released;
-
-            // // Creating an element to hold the release year
-            // var p2 = $("<p>").text("Released: " + released);
-
-            // // Displaying the release year
-            // weatherDiv.append(p2);
-
-            // // Storing the plot
-            // var plot = response.Plot;
-
-            // // Creating an element to hold the plot
-            // var pThree = $("<p>").text("Plot: " + plot);
-
-            // // Appending the plot
-            // weatherDiv.append(pThree);
-
-            // // Retrieving the URL for the image
-            // var imgURL = response.Poster;
-
-            // // Creating an element to hold the image
-            // var image = $("<img>").attr("src", imgURL);
-
-            // Appending the image
-            // weatherDiv.append(image);
-
-            // Putting the entire movie above the previous movies
             $("#weatherShow").prepend(weatherDiv);
         });
 
